@@ -94,19 +94,17 @@ int main(void)
   {
     /* USER CODE END WHILE */
       // Leer el estado del botón (con debounce simple)
-      if (HAL_GPIO_ReadPin(SWITCH_PORT, SWITCH_PIN) == GPIO_PIN_RESET && !boton_presionado) {
+      if (is_button_pressed() && !boton_presionado) {
           boton_presionado = true;
           if (estado_actual == VERDE) {
               cambiar_estado(VERDE_PARPADEANTE);
           }
-      } else if (HAL_GPIO_ReadPin(SWITCH_PORT, SWITCH_PIN) == GPIO_PIN_SET) {
+      } else if (!is_button_pressed()) {
           boton_presionado = false;
       }
 
       // Manejo de estados basado en tiempo
-      if (HAL_GetTick() - tiempo_cambio >= 1000) {
-          manejar_temporizador();
-      }
+      manejar_temporizador();
 
       // Manejo del parpadeo (sin delay)
       if (estado_actual == VERDE_PARPADEANTE || estado_actual == ROJO_PARPADEANTE) {

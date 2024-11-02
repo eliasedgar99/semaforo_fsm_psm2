@@ -29,5 +29,6 @@ extern bool boton_presionado;
 void cambiar_estado(EstadoSemaforo nuevo_estado);
 void manejar_temporizador(void);
 void manejar_parpadeo(void);
+int is_button_pressed(void);
 
 #endif // ESTADOS_H

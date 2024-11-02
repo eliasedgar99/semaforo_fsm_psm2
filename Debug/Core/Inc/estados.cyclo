@@ -1,3 +1,8 @@
-../Core/Inc/estados.c:10:6:cambiar_estado	4
-../Core/Inc/estados.c:31:6:manejar_temporizador	8
-../Core/Inc/estados.c:53:6:manejar_parpadeo	4
+../Core/Inc/estados.c:11:12:is_timer_expired	1
+../Core/Inc/estados.c:15:5:is_button_pressed	1
+../Core/Inc/estados.c:20:6:accion_verde	1
+../Core/Inc/estados.c:25:6:accion_rojo	1
+../Core/Inc/estados.c:30:6:accion_parpadeo_inicial	1
+../Core/Inc/estados.c:36:6:cambiar_estado	5
+../Core/Inc/estados.c:49:6:manejar_temporizador	7
+../Core/Inc/estados.c:59:6:manejar_parpadeo	4
